@@ -6,6 +6,8 @@
     height: $height;
 }
 
+
+
 @mixin font($weight, $letterSpacing, $fontSize) {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
