@@ -1,0 +1,13 @@
+
+
+header{
+    @include flexCenter(column, 100vh);
+
+    background: $softBg;
+
+    button{
+        background-color: $primaryColor;
+        padding: $paddingMain;
+        border-radius: $paddingMain;
+    }
+}

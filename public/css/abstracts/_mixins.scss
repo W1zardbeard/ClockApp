@@ -1,0 +1,16 @@
+@mixin flexCenter ($direction, $height){
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+    height: $height;
+}
+
+@mixin font($weight, $letterSpacing, $fontSize) {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: $weight;
+    font-style: normal;
+    letter-spacing: $letterSpacing;
+    font-size: $fontSize;
+  }
