@@ -1,0 +1,15 @@
+main{
+    height:100vh;
+    display:flex;
+    direction:column;
+    
+    background-size:cover;
+}
+
+.daytimeBg{
+    background-image:url("../../images/desktop/bg-image-daytime.jpg");
+}
+
+.mighttimeBg{
+    background-image:url("../../images/desktop/bg-image-nighttime.jpg");
+}
