@@ -122,6 +122,11 @@ main {
   display: flex;
   direction: column;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .daytimeBg {
@@ -130,4 +135,9 @@ main {
 
 .mighttimeBg {
   background-image: url("../../images/desktop/bg-image-nighttime.jpg");
+}
+
+.wrapper {
+  width: 1100px;
+  background-color: red;
 }/*# sourceMappingURL=style.css.map */

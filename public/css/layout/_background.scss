@@ -2,8 +2,8 @@ main{
     height:100vh;
     display:flex;
     direction:column;
-    
     background-size:cover;
+    @include flexCenter(column, 100vh);
 }
 
 .daytimeBg{
