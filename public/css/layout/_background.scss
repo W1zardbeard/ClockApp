@@ -4,10 +4,11 @@ main{
     direction:column;
     background-size:cover;
     @include flexCenter(column, 100vh);
+    
 }
 
 .daytimeBg{
-    background-image:url("../../images/desktop/bg-image-daytime.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/desktop/bg-image-daytime.jpg");
 }
 
 .mighttimeBg{
