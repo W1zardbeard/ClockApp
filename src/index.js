@@ -2,11 +2,26 @@ import $ from "jquery";
 import axios from "axios";
 const quoteApiUrl = "https://api.quotable.io"; 
 
-$( document ).ready(function() {
-   
 
-  
-});
+function time(){
+    const now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    if(minutes < 10){
+        $(".time").text(hours + ":" + "0" + minutes);
+    } else{
+        $(".time").text(hours + ":" + minutes);
+    }
+    
+
+//     if(hours >= 5 && hours < 12){
+//         $(".timeIndicator").text("Morning");
+//     } else if (hours >= 12 && hours < 18){
+//         $(".timeIndicator").text("Morning");
+//     }else if(hours >= 18 && hours < ){
+//         $(".timeIndicator").text("Evening");
+//     }
+}
 
 
 async function getQuote(){
@@ -19,6 +34,8 @@ async function getQuote(){
 }
 
 getQuote();
+setInterval(time, 1000);
+
 
 
 
