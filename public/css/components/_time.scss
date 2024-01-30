@@ -5,4 +5,18 @@
         flex-direction: row;
         gap:1rem;
     }
+
+    .dayIcon{
+        align-self: center;
+    }
+
+    .timeDiv{
+        display: flex;
+        align-items:flex-end;
+
+        .timeZone{
+            // padding-bottom:16px;
+            
+        }
+    }
 }

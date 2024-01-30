@@ -1,7 +1,26 @@
+<% if(locals.country){%>
 <div class="timeCont"> 
-    <div class="welcome">
-        <img src="../images/desktop/icon-sun.svg" class="dayIcon">
+    <div class="welcome animate__animated animate__fadeIn animate__delay-1s">
+        <img src="" class="dayIcon">
         <h4>Good <span class="timeIndicator">Morning</span>, it's currently</h4>
     </div>
-    <h1 class="time"></h1>
+    <div class="timeDiv animate__animated animate__fadeIn animate__delay-2s">
+        <h1 class="time ">00:00</h1>
+        <h2 class="timeZone"><%=locals.timezone%></h2>
+    </div>
+    <h3 class="animate__animated animate__fadeIn animate__delay-3s">IN <%= locals.city %>, <%=locals.country%></h3>
 </div>
+<%} else{%>
+    <div class="timeCont"> 
+        <div class="welcome animate__animated animate__fadeIn animate__delay-1s">
+            <img src="" class="dayIcon">
+            <h4>Good <span class="timeIndicator">Morning</span>, it's currently</h4>
+        </div>
+        <div class="timeDiv animate__animated animate__fadeIn animate__delay-2s">
+            <h1 class="time ">00:00</h1>
+           
+        </div>
+        <h3 class="animate__animated animate__fadeIn animate__delay-3s">Sorry we cannot retrive location data</h3>
+    </div>
+<%}%>
+

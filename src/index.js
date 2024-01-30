@@ -1,5 +1,6 @@
 import $ from "jquery";
 import axios from "axios";
+
 const quoteApiUrl = "https://api.quotable.io"; 
 
 
@@ -14,13 +15,22 @@ function time(){
     }
     
 
-//     if(hours >= 5 && hours < 12){
-//         $(".timeIndicator").text("Morning");
-//     } else if (hours >= 12 && hours < 18){
-//         $(".timeIndicator").text("Morning");
-//     }else if(hours >= 18 && hours < ){
-//         $(".timeIndicator").text("Evening");
-//     }
+    if(hours >= 5 && hours < 12){
+        $(".timeIndicator").text("Morning");
+    } else if (hours >= 12 && hours < 18){
+        $(".timeIndicator").text("Afternoon");
+    }else if(hours >= 18 && hours < 24 ){
+        $(".timeIndicator").text("Evening");
+    } else if (hours < 5){
+        $(".timeIndicator").text("Morning");
+    }
+
+
+    if(hours >= 5 && hours < 18){
+        $(".dayIcon").attr("src", "../images/desktop/icon-sun.svg");
+    } else{
+        $(".dayIcon").attr("src", "../images/desktop/icon-moon.svg");
+    }
 }
 
 
@@ -32,6 +42,8 @@ async function getQuote(){
     $(".author").text(author);
    
 }
+
+
 
 getQuote();
 setInterval(time, 1000);

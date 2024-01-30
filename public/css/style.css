@@ -59,6 +59,7 @@ h1 {
   letter-spacing: -0.3rem;
   font-size: 12.5rem;
   color: #ffffff;
+  line-height: 12.5rem;
 }
 
 h2 {
@@ -149,7 +150,13 @@ p {
   flex-direction: row;
   gap: 1rem;
 }
-
+.timeCont .dayIcon {
+  align-self: center;
+}
+.timeCont .timeDiv {
+  display: flex;
+  align-items: flex-end;
+}
 main {
   height: 100vh;
   display: flex;
