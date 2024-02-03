@@ -1,3 +1,7 @@
+.hide {
+  display: none !important;
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -179,11 +183,54 @@ p {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.btn .btnArrow {
-  transform: rotate(180deg);
+.btn:hover {
+  cursor: pointer;
+}
+.btn:hover .btnArrow {
+  opacity: 0.5;
+}
+.bottomSheet {
+  background-color: #ffffff;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  direction: column;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.bottomSheet .vertLine {
+  border-left: 1px solid #B3B6B8;
+}
+.bottomSheet .bottomCont {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 5rem;
+}
+.bottomSheet .bottomCol {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.bottomSheet .statCont {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+.bottomSheet .wrapper h6 {
+  color: #303030;
+}
+.bottomSheet .wrapper h2 {
+  color: #303030;
 }
 
 main {
+  background-color: #000000;
   height: 100vh;
   display: flex;
   direction: column;
@@ -199,8 +246,8 @@ main {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/desktop/bg-image-daytime.jpg");
 }
 
-.mighttimeBg {
-  background-image: url("../../images/desktop/bg-image-nighttime.jpg");
+.nighttimeBg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/desktop/bg-image-nighttime.jpg");
 }
 
 .wrapper {
@@ -208,9 +255,11 @@ main {
   height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .timeAndBtn {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }/*# sourceMappingURL=style.css.map */

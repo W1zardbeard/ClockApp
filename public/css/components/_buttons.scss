@@ -14,7 +14,14 @@
     padding-top:1rem;
     padding-bottom:1rem;
 
+    &:hover{
+        .btnArrow{
+            opacity: 0.5;
+        }
+       cursor: pointer;
+    }
+
     .btnArrow{
-        transform: rotate(180deg);
+        //transform: rotate(180deg);
     }
 }

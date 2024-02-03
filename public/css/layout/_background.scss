@@ -1,9 +1,11 @@
 main{
+    background-color:$primaryColorBlack;
     height:100vh;
     display:flex;
     direction:column;
     background-size:cover;
     @include flexCenter(column, 100vh);
+   
     
 }
 
@@ -11,6 +13,6 @@ main{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/desktop/bg-image-daytime.jpg");
 }
 
-.mighttimeBg{
-    background-image:url("../../images/desktop/bg-image-nighttime.jpg");
+.nighttimeBg{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/desktop/bg-image-nighttime.jpg");
 }
