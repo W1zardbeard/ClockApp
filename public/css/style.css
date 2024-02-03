@@ -157,6 +157,32 @@ p {
   display: flex;
   align-items: flex-end;
 }
+.btn {
+  height: 3.5rem;
+  border-radius: 28px;
+  background-color: #ffffff;
+  border-style: none;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0rem;
+  font-size: 1rem;
+  color: #ffffff;
+  color: #303030;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.btn .btnArrow {
+  transform: rotate(180deg);
+}
+
 main {
   height: 100vh;
   display: flex;
@@ -183,4 +209,8 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.timeAndBtn {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
