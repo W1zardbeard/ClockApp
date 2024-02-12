@@ -1,7 +1,7 @@
 import $ from "jquery";
 import axios from "axios";
 
-const quoteApiUrl = "https://api.quotable.io"; 
+const quoteApiUrl = "https://type.fit/api/quotes"; 
 var showBottom = false;
 $(".bottomSheet").hide();
 function time(){
@@ -31,7 +31,15 @@ function time(){
         $(".dayIcon").attr("src", "../images/desktop/icon-sun.svg");
         $("main").removeClass("nighttimeBg");
         $("main").addClass("daytimeBg");
+
+        $(".bottomSheet").removeClass("darkMode");
+        $(".statCont h6").removeClass("statDarkmode");
+        $(".statCont h2").removeClass("statDarkmode");
     } else{
+        $(".bottomSheet").addClass("darkMode");
+        $(".statCont h6").addClass("statDarkmode");
+        $(".statCont h2").addClass("statDarkmode");
+
         $("main").removeClass("daytimeBg");
         $("main").addClass("nighttimeBg");
         $(".dayIcon").attr("src", "../images/desktop/icon-moon.svg");
@@ -40,9 +48,11 @@ function time(){
 
 
 async function getQuote(){
-    var quoteResponse = await axios.get(quoteApiUrl + "/random");
-    var quote = quoteResponse.data.content;
-    var author = quoteResponse.data.author;
+    var quoteResponse = await axios.get(quoteApiUrl);
+    var randomQuote = quoteResponse.data[(Math.floor(Math.random() * quoteResponse.data.length))];
+    var quote = randomQuote.text;
+    var author = randomQuote.author.split(",")[0];
+
     $(".quoteText").text('"' + quote + '"');
     $(".author").text(author);
    
@@ -61,25 +71,7 @@ $(".refresh").on("click", function(){
 })
 
 
-// $(".btn").on("click", function(){
-    
-//     if(showBottom == false){
-//         $(".bottomSheet").slideToggle("fast");
-//         setTimeout(function(){
-//             $(".quoteCont").addClass("hide");
-           
-//         }, 500);
-        
-//         showBottom = true;
-//     } else{
-//         $(".quoteCont").removeClass("hide");
-        
-//         setTimeout(function(){
-//             $(".bottomSheet").slideToggle("fast");
-//         }, 500);
-//         showBottom = false;
-//     }
-// })
+
 
 $(".btn").on("click", function(){
     if(showBottom == false){
@@ -93,6 +85,9 @@ $(".btn").on("click", function(){
             $(".quoteCont").hide();
         }, 800);
 
+        $(".btnArrow").addClass("btnArrowRot");
+        $(".btnText").text("Less");
+
         showBottom = true;
     } else{
         $(".bottomSheet").removeClass("animate__slideInUp");
@@ -104,8 +99,8 @@ $(".btn").on("click", function(){
             $(".quoteCont").addClass("animate__fadeIn");
         }, 800);
 
-        
-        
+        $(".btnArrow").removeClass("btnArrowRot");
+        $(".btnText").text("More");
         showBottom = false;
     }
 })

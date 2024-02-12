@@ -3,8 +3,21 @@ h1{
     line-height: 12.5rem;
 }
 
+@media (min-width: 460px) and  (max-width: $smallDesktop){
+    h1{
+        @include font(700, -0.3rem, 10rem);
+        line-height: 12.5rem;
+    }
+    h2{
+        @include font(700, -0.3rem, 3rem);
+        
+    }
+}
+
+
+
 h2{
-    @include font(700, 0, 3.5rem)
+    @include font(400, 0, 3.5rem)
 }
 
 h3{
@@ -30,3 +43,24 @@ p{
     @include font(400, 0, 1.125rem);
 }
 
+@media screen and (max-width: 930px){
+    h1{
+        @include font(700, -0.3rem, 7rem);
+        line-height: normal;
+    }
+
+    h2{
+        @include font(400, -0.3rem, 2rem);
+    }
+}
+
+@media screen and  (max-width: 460px){
+    h1{
+        @include font(700, -0.3rem, 6rem);
+        
+    }
+
+    h2{
+        @include font(400, -0.3rem, 2rem);
+    }
+}

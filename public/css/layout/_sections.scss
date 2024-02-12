@@ -4,3 +4,11 @@
     align-items: flex-end;
 }
 
+@media screen and (max-width: 930px){
+    .timeAndBtn{
+        flex-direction:column;
+        gap:2rem;
+        align-items:flex-start;
+    }
+}
+

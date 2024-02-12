@@ -5,8 +5,12 @@ main{
     direction:column;
     background-size:cover;
     @include flexCenter(column, 100vh);
-   
+    width:100%;
     
+}
+
+html, body{
+    width:100%;
 }
 
 .daytimeBg{

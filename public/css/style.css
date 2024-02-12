@@ -66,10 +66,31 @@ h1 {
   line-height: 12.5rem;
 }
 
+@media (min-width: 460px) and (max-width: 1200px) {
+  h1 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -0.3rem;
+    font-size: 10rem;
+    color: #ffffff;
+    line-height: 12.5rem;
+  }
+  h2 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -0.3rem;
+    font-size: 3rem;
+    color: #ffffff;
+  }
+}
 h2 {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   letter-spacing: 0;
   font-size: 3.5rem;
@@ -129,6 +150,47 @@ p {
   color: #ffffff;
 }
 
+@media screen and (max-width: 930px) {
+  h1 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -0.3rem;
+    font-size: 7rem;
+    color: #ffffff;
+    line-height: normal;
+  }
+  h2 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -0.3rem;
+    font-size: 2rem;
+    color: #ffffff;
+  }
+}
+@media screen and (max-width: 460px) {
+  h1 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -0.3rem;
+    font-size: 6rem;
+    color: #ffffff;
+  }
+  h2 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -0.3rem;
+    font-size: 2rem;
+    color: #ffffff;
+  }
+}
 .quoteCont {
   display: flex;
   flex-direction: column;
@@ -149,6 +211,11 @@ p {
   font-weight: 700;
 }
 
+@media screen and (max-width: 800px) {
+  .quoteCont {
+    width: 100%;
+  }
+}
 .timeCont .welcome {
   display: flex;
   flex-direction: row;
@@ -160,6 +227,14 @@ p {
 .timeCont .timeDiv {
   display: flex;
   align-items: flex-end;
+}
+@media screen and (max-width: 930px) {
+  .timeCont .timeDiv {
+    gap: 1rem;
+  }
+  .timeCont .timeDiv .h2 {
+    margin-bottom: 66px;
+  }
 }
 .btn {
   height: 3.5rem;
@@ -189,8 +264,12 @@ p {
 .btn:hover .btnArrow {
   opacity: 0.5;
 }
+.btn .btnArrowRot {
+  transform: rotate(180deg);
+}
+
 .bottomSheet {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.75);
   width: 100%;
   height: 50%;
   display: flex;
@@ -203,6 +282,8 @@ p {
   height: 50%;
   padding-top: 5rem;
   padding-bottom: 5rem;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 .bottomSheet .vertLine {
   border-left: 1px solid #B3B6B8;
@@ -229,6 +310,15 @@ p {
   color: #303030;
 }
 
+.darkMode {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+}
+
+.statDarkmode {
+  color: #ffffff !important;
+}
+
 main {
   background-color: #000000;
   height: 100vh;
@@ -240,6 +330,11 @@ main {
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  width: 100%;
+}
+
+html, body {
+  width: 100%;
 }
 
 .daytimeBg {
@@ -258,8 +353,25 @@ main {
   justify-content: space-around;
 }
 
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    width: 90%;
+    height: 100vh;
+    justify-content: space-between;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
 .timeAndBtn {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+@media screen and (max-width: 930px) {
+  .timeAndBtn {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+  }
 }/*# sourceMappingURL=style.css.map */
